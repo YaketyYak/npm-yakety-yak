@@ -4,14 +4,17 @@
   "description": "Javascript Integration for YaketyYak",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
+  "proxy": "https://yakety-yak.test",
   "scripts": {
-    "prepublish": "tsc",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "YaketyYak",
   "license": "ISC",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -29,6 +32,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "axios": "^1.5.1"
+    "tslib": "^2.6.2"
   }
 }

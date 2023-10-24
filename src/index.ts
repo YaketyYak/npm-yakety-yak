@@ -1,30 +1,27 @@
-import ApiClient from "./api/client";
-import Reviews from "./api/reviews";
-import { AxiosResponse } from "axios";
+import {ApiClient} from "./apiClient.js";
+import {PaginatedResponse, ReviewResponse, YaketyYakOptions} from "./types";
+import {Reviews} from "./reviews.js";
 
 class YaketyYak {
-    private apiClient: ApiClient;
+    private readonly apiClient: ApiClient;
 
-    constructor() {
-        this.apiClient = new ApiClient();
+    constructor(apiKey: string, options?: YaketyYakOptions) {
+        console.log('con', apiKey);
+
+        this.apiClient = new ApiClient(
+            apiKey, options
+        );
     }
 
-    configure(apiKey: string) {
-        // 2|7ReHLfzERe5WIpVhLdLjKQgLjHbzVGcEq809CcMl5c6ad14e
-        console.log('ApiKey', apiKey);
-        this.apiClient.apiKey = apiKey;
+    getReviewsFor: ({reviewable}: { reviewable: string }) => Promise<PaginatedResponse<ReviewResponse>> = async ({reviewable}: { reviewable: string }) => {
+        if (reviewable === undefined) {
+            throw new Error('Reviewable is undefined');
+        }
 
-        // return this;
-    }
-
-    getReviews(): Promise<AxiosResponse<any>> {
-        const client = new Reviews(this.apiClient)
-        return client.get()
-    }
+        return new Reviews(this.apiClient).get(reviewable)
+    };
 }
 
-const singleton = new YaketyYak();
-
 export {
-    singleton as YaketyYak,
+    YaketyYak,
 }

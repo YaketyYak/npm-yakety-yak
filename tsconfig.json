@@ -1,19 +1,33 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-        "module": "ES2022",
-        "moduleResolution": "node",
-        "target": "ES2022",
-        "strict": true,
         "forceConsistentCasingInFileNames": true,
         "outDir": "dist",
-        "sourceMap": true,
         "declaration": true,
         "declarationMap": true,
-        "lib": ["ES2022", "dom"],
-        "skipLibCheck": true
+        "skipLibCheck": true,
+
+        "alwaysStrict": true,
+        "downlevelIteration": true,
+        "inlineSources": true,
+        "importHelpers": true,
+        "lib": ["es5", "dom"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmitHelpers": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "pretty": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "strict": true,
+        "strictNullChecks":false,
+        "strictBindCallApply": true,
+        "target": "es5"
     },
     "include": [
+        "src/*.ts",
         "src/**/*.ts",
     ],
     "exclude": [
