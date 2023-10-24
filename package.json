@@ -1,7 +1,8 @@
 {
-  "name": "javascript-yak",
+  "name": "yakety-yak",
   "version": "1.0.0",
-  "description": "Javascript Integration for YaketyYak",
+  "description": "Javascript wrapper around the YaketyYak API",
+  "author": "YaketyYak",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -10,7 +11,6 @@
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "YaketyYak",
   "license": "ISC",
   "files": [
     "dist",
@@ -22,7 +22,8 @@
   },
   "keywords": [
     "yakety yak",
-    "product reviews"
+    "product reviews",
+    "shopify"
   ],
   "bugs": {
     "url": "https://github.com/YaketyYak/javascript-yak/issues"
