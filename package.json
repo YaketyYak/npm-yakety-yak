@@ -1,6 +1,6 @@
 {
-  "name": "yakety-yak",
-  "version": "1.0.0",
+  "name": "@yakety-yak/yakety-yak",
+  "version": "1.0.2",
   "description": "Javascript wrapper around the YaketyYak API",
   "author": "YaketyYak",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YaketyYak/javascript-yak.git"
+    "url": "git@github.com:yakety-yak-reviews/npm-yakety-yak.git"
   },
   "keywords": [
     "yakety yak",
@@ -26,9 +26,9 @@
     "shopify"
   ],
   "bugs": {
-    "url": "https://github.com/YaketyYak/javascript-yak/issues"
+    "url": "https://github.com/yakety-yak-reviews/npm-yakety-yak/issues"
   },
-  "homepage": "https://github.com/YaketyYak/javascript-yak#readme",
+  "homepage": "https://github.com/yakety-yak-reviews/npm-yakety-yak#readme",
   "devDependencies": {
     "typescript": "^4.9.5"
   },
